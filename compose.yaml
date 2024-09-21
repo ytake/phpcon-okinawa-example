@@ -1,0 +1,8 @@
+services:
+  phluxor:
+    container_name: phluxor
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./:/var/app

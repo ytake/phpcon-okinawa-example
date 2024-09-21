@@ -1,0 +1,24 @@
+{
+  "name": "ytake/phpcon-okinawa-example",
+  "autoload": {
+    "psr-4": {
+      "Example\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "yuuki takezawa",
+      "email": "yuuki.takezawa@comnect.jp.net"
+    }
+  ],
+  "require": {
+    "php": ">=8.3.0",
+    "ext-swoole": "^5.0",
+    "phluxor/phluxor": "^0.1.10"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  }
+}
