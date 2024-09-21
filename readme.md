@@ -49,13 +49,14 @@ We will represent the following classroom activities in school life using the ac
 ```mermaid
 flowchart TD
     subgraph ActorSystem
-        Root -->|Spawn\nStart Class Instruction| ClassroomActor("Classroom Actor\n(Math)")
+        Root -->|Start Class Instruction| ClassroomActor("Classroom Actor\n(Math)")
     end
 ```
 
 ### The teacher comes to the classroom
 
-we'll consider "The teacher comes" as the Classroom Actor creating a Teacher Actor.
+In this example,  
+"The teacher is coming" is expressed as a classroom actor creating a teacher actor.
 
 ```mermaid
 flowchart TD
@@ -63,13 +64,6 @@ flowchart TD
         ClassroomActor("Classroom Actor(Math)") -->|Spawn| Teacher("Teacher Actor")
     end
 ```
-
-As mentioned, the teacher could also be a root actor and be passed to the Classroom Actor as an external dependency.
-
-However, actors have the concept of supervision, and using multiple root actors introduces several considerations that
-need to be addressed.
-
-Delving into that here would take us significantly off track, so let's set it aside for now.
 
 ### Test begins
 
