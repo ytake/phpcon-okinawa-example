@@ -2,8 +2,9 @@
 
 Training the Actor Model with Phluxor.
 
-Although this is quite different from typical PHP processing, 　
- it is a good way to learn about the actor model.
+Although this is quite different from typical PHP processing,
+
+it is a good way to learn about the actor model.
 
 All actors in the actor model are executed asynchronously via coroutines.
 
@@ -59,7 +60,7 @@ we'll consider "The teacher comes" as the Classroom Actor creating a Teacher Act
 ```mermaid
 flowchart TD
     subgraph ActorSystem
-        ClassroomActor("Classroom Actor\n(Math)") -->|Spawn| Teacher("Teacher Actor")
+        ClassroomActor("Classroom Actor(Math)") -->|Spawn| Teacher("Teacher Actor")
     end
 ```
 
@@ -77,7 +78,7 @@ The Classroom Actor Sends a Message to the Teacher Actor to Prepare for the Test
 ```mermaid
 flowchart TD
     subgraph ActorSystem
-        ClassroomActor("Classroom Actor\n(Math)") -->|Spawn\nPrepare for Test Start| Teacher("Teacher Actor")
+        ClassroomActor("Classroom Actor(Math)") -->|Prepare for Test Start| Teacher("Teacher Actor")
     end
 ```
 
@@ -86,7 +87,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph ActorSystem
-        Teacher("Teacher Actor") -->|Start Test\nSpawn| StudentActor("Student Actors")
+        Teacher("Teacher Actor") -->|Start Test| StudentActor("Student Actors")
     end
 ```
 
@@ -116,9 +117,9 @@ The actual message passing between actors is as follows.
 ```mermaid
 flowchart TD
     subgraph ActorSystem
-        ClassroomActor("Classroom Actor\n(Math)") -->|*PrepareTest| Teacher("Teacher Actor")
-        Teacher("Teacher Actor") -->|*StartTest| StudentActor("Student Actor")
-        StudentActor("Student Actor") -->|*SubmitTest| Teacher("Teacher Actor")
+        ClassroomActor("Classroom Actor(Math)") -->|PrepareTest| Teacher("Teacher Actor")
+        Teacher("Teacher Actor") -->|StartTest| StudentActor("Student Actor")
+        StudentActor("Student Actor") -->|SubmitTest| Teacher("Teacher Actor")
     end
 ```
 
