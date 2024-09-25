@@ -40,7 +40,7 @@ We will represent the following classroom activities in school life using the ac
 - Class time begins
 - The teacher comes to the classroom
 - Test begins
-- Solve problems
+- Write your answers on the answer sheet
 - Submit test answer sheets
 - After everyone has submitted, the class ends
 
@@ -76,7 +76,7 @@ flowchart TD
     end
 ```
 
-### Solve problems
+### Write your answers on the answer sheet
 
 ```mermaid
 flowchart TD
